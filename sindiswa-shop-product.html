@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kinky Curly Glueless Wig — Sindiswa Shop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F6EFE2; --cream-2:#EFE4CF; --ink:#2B1A22;
+    --plum:#3F1533; --plum-2:#5A1F44; --gold:#C6941A; --gold-2:#E3B23C;
+    --rose:#9C3A4A; --line:rgba(43,26,34,0.14); --muted:#8a7680;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:'Manrope',sans-serif;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,.display{font-family:'Fraunces',serif;font-weight:600;letter-spacing:-0.01em;margin:0;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+  @media (max-width:640px){.wrap{padding:0 18px;}}
+
+  .announce{background:var(--plum);color:var(--cream);font-size:12.5px;letter-spacing:0.08em;text-transform:uppercase;text-align:center;padding:9px 12px;font-weight:600;}
+  header{background:var(--cream);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0;}
+  .logo{font-family:'Fraunces',serif;font-size:24px;font-weight:700;letter-spacing:-0.02em;}
+  .logo em{font-style:italic;color:var(--rose);font-weight:500;}
+  .nav-links{display:flex;gap:30px;font-size:14px;font-weight:600;}
+  .pill-btn{background:var(--plum);color:var(--cream);padding:10px 20px;border-radius:999px;font-size:13px;font-weight:700;}
+  @media (max-width:860px){.nav-links{display:none;}}
+
+  .crumb{font-size:12.5px;color:var(--muted);padding:20px 0 6px;}
+  .crumb a:hover{color:var(--rose);}
+
+  /* ---------- Product layout ---------- */
+  .product{display:grid;grid-template-columns:1fr 1fr;gap:56px;padding:20px 0 70px;align-items:flex-start;}
+  @media (max-width:900px){.product{grid-template-columns:1fr;gap:32px;}}
+
+  .gallery-main{
+    background:var(--cream-2);border:1px solid var(--line);border-radius:4px;
+    aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;
+  }
+  .gallery-main svg{width:56%;height:56%;color:var(--ink);}
+  .gallery-badge{position:absolute;top:16px;left:16px;background:var(--rose);color:var(--cream);font-size:11px;font-weight:700;letter-spacing:0.05em;text-transform:uppercase;padding:6px 12px;border-radius:999px;}
+  .gallery-thumbs{display:flex;gap:10px;margin-top:12px;}
+  .thumb{
+    width:70px;height:70px;border-radius:3px;border:1.5px solid var(--line);background:var(--cream-2);
+    display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;
+  }
+  .thumb.active{border-color:var(--rose);}
+  .thumb svg{width:60%;height:60%;color:var(--ink);}
+
+  .p-eyebrow{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--rose);font-weight:700;margin-bottom:10px;}
+  .p-title{font-size:clamp(26px,3.2vw,34px);line-height:1.1;margin-bottom:14px;}
+  .p-rating{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted);margin-bottom:20px;}
+  .stars{color:var(--gold);letter-spacing:1px;}
+  .p-price{display:flex;align-items:baseline;gap:12px;margin-bottom:6px;}
+  .price-now{font-family:'Fraunces',serif;font-weight:700;font-size:30px;}
+  .price-was{font-size:16px;color:#b3a1a8;text-decoration:line-through;}
+  .price-save{background:rgba(156,58,74,0.12);color:var(--rose);font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;}
+  .p-tax{font-size:12.5px;color:var(--muted);margin-bottom:24px;}
+
+  .opt-group{margin-bottom:22px;}
+  .opt-label{display:flex;justify-content:space-between;font-size:13.5px;font-weight:700;margin-bottom:10px;}
+  .opt-label .sel{font-weight:600;color:var(--rose);}
+  .opt-row{display:flex;gap:10px;flex-wrap:wrap;}
+  .opt-btn{
+    padding:10px 18px;border:1.5px solid var(--line);border-radius:3px;background:var(--cream);
+    font-family:inherit;font-size:13.5px;font-weight:600;cursor:pointer;
+  }
+  .opt-btn:hover{border-color:var(--rose);}
+  .opt-btn.active{background:var(--plum);border-color:var(--plum);color:var(--cream);}
+
+  .qty-row{display:flex;align-items:center;gap:16px;margin:26px 0 18px;}
+  .qty-box{display:flex;align-items:center;border:1.5px solid var(--line);border-radius:3px;}
+  .qty-box button{background:none;border:none;width:38px;height:42px;font-size:16px;cursor:pointer;font-weight:700;}
+  .qty-box span{width:32px;text-align:center;font-weight:700;}
+  .btn-gold{flex:1;background:var(--gold);color:var(--ink);border:none;padding:15px 22px;font-weight:800;font-size:14px;border-radius:3px;cursor:pointer;}
+  .btn-plum{width:100%;background:var(--plum);color:var(--cream);border:none;padding:15px 22px;font-weight:800;font-size:14px;border-radius:3px;margin-top:10px;cursor:pointer;}
+
+  .p-badges{display:flex;gap:22px;flex-wrap:wrap;margin-top:26px;padding-top:22px;border-top:1px solid var(--line);}
+  .p-badge{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:var(--muted);}
+  .p-badge svg{width:18px;height:18px;color:var(--rose);}
+
+  /* ---------- Tabs / spec table ---------- */
+  .tabs{border-top:1px solid var(--line);padding:50px 0;}
+  .tab-heads{display:flex;gap:34px;border-bottom:1px solid var(--line);margin-bottom:30px;}
+  .tab-head{padding-bottom:14px;font-weight:700;font-size:14.5px;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;}
+  .tab-head.active{color:var(--ink);border-color:var(--rose);}
+  .feat-list{list-style:none;padding:0;margin:0 0 28px;display:grid;grid-template-columns:1fr 1fr;gap:10px 24px;}
+  @media (max-width:640px){.feat-list{grid-template-columns:1fr;}}
+  .feat-list li{font-size:14px;padding-left:20px;position:relative;}
+  .feat-list li::before{content:"✓";position:absolute;left:0;color:var(--rose);font-weight:700;}
+  .spec-table{width:100%;border-collapse:collapse;font-size:13.5px;}
+  .spec-table tr{border-bottom:1px solid var(--line);}
+  .spec-table td{padding:12px 4px;}
+  .spec-table td:first-child{color:var(--muted);font-weight:600;width:200px;}
+
+  /* ---------- Reviews ---------- */
+  .review-summary{display:flex;gap:40px;align-items:center;margin-bottom:36px;flex-wrap:wrap;}
+  .review-score{text-align:center;}
+  .review-score .num{font-family:'Fraunces',serif;font-size:44px;font-weight:700;}
+  .review-bars{flex:1;min-width:220px;display:flex;flex-direction:column;gap:6px;}
+  .rbar{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--muted);}
+  .rbar .track{flex:1;height:6px;background:var(--cream-2);border-radius:3px;overflow:hidden;}
+  .rbar .fill{height:100%;background:var(--gold);}
+  .review{padding:20px 0;border-bottom:1px solid var(--line);}
+  .review-top{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:8px;}
+  .review-name{font-weight:700;color:var(--ink);}
+  .review p{font-size:14px;line-height:1.6;margin:8px 0 0;color:#4a3941;}
+
+  /* ---------- Related ---------- */
+  .related{padding:60px 0 90px;border-top:1px solid var(--line);}
+  .related h2{font-size:26px;margin-bottom:28px;}
+  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  @media (max-width:980px){.grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:560px){.grid{grid-template-columns:1fr;}}
+  .card{background:var(--cream-2);border:1px solid var(--line);border-radius:4px;overflow:hidden;}
+  .card-swatch{height:160px;display:flex;align-items:center;justify-content:center;}
+  .card-swatch svg{width:60%;height:60%;color:var(--ink);}
+  .card-body{padding:16px;}
+  .card-body h3{font-size:14.5px;font-weight:600;line-height:1.3;}
+  .card-price{font-family:'Fraunces',serif;font-weight:700;font-size:16px;margin-top:8px;}
+
+  footer{background:var(--ink);color:rgba(246,239,226,0.6);text-align:center;padding:34px 0;font-size:12px;}
+  footer a{color:var(--gold-2);}
+</style>
+</head>
+<body>
+
+<div class="announce">Free tracked shipping to South Africa on orders over R1 800 · Ships from our US warehouse</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="sindiswa-shop.html" class="logo">Sindiswa<em>Shop</em></a>
+    <nav class="nav-links">
+      <a href="sindiswa-shop.html#textures">Textures</a>
+      <a href="sindiswa-shop.html#bestsellers">Best Sellers</a>
+      <a href="sindiswa-shop.html#story">Our Story</a>
+      <a href="sindiswa-shop.html#contact">Contact</a>
+    </nav>
+    <a class="pill-btn" href="sindiswa-shop.html#bestsellers">Back to Shop</a>
+  </div>
+</header>
+
+<div class="wrap crumb">
+  <a href="sindiswa-shop.html">Home</a> / <a href="sindiswa-shop.html#bestsellers">Best Sellers</a> / <span>Kinky Curly Glueless Wig</span>
+</div>
+
+<div class="wrap product">
+  <div>
+    <div class="gallery-main" id="galleryMain">
+      <div class="gallery-badge">Best Seller</div>
+    </div>
+    <div class="gallery-thumbs" id="galleryThumbs"></div>
+  </div>
+
+  <div>
+    <div class="p-eyebrow">Virgin Human Hair · Glueless Install</div>
+    <h1 class="p-title">Kinky Curly Glueless Wig, 4×4 Closure</h1>
+    <div class="p-rating"><span class="stars">★★★★★</span> 4.9 out of 5 · 168 reviews</div>
+
+    <div class="p-price">
+      <span class="price-now">R2 599</span>
+      <span class="price-was">R3 199</span>
+      <span class="price-save">Save 19%</span>
+    </div>
+    <div class="p-tax">Price includes duty for South African delivery. No surprise fees at the door.</div>
+
+    <div class="opt-group">
+      <div class="opt-label">Length <span class="sel" id="lengthSel">18"</span></div>
+      <div class="opt-row" id="lengthRow"></div>
+    </div>
+
+    <div class="opt-group">
+      <div class="opt-label">Density <span class="sel" id="densitySel">200%</span></div>
+      <div class="opt-row" id="densityRow"></div>
+    </div>
+
+    <div class="qty-row">
+      <div class="qty-box">
+        <button onclick="changeQty(-1)">−</button>
+        <span id="qtyVal">1</span>
+        <button onclick="changeQty(1)">+</button>
+      </div>
+      <button class="btn-gold">Add to Cart — R2 599</button>
+    </div>
+    <button class="btn-plum">Buy Now with Instant Checkout</button>
+
+    <div class="p-badges">
+      <div class="p-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg>Single-donor virgin hair</div>
+      <div class="p-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/></svg>30-day easy return</div>
+      <div class="p-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h18M3 6h18M3 18h18"/></svg>WhatsApp fitting help</div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap tabs">
+  <div class="tab-heads">
+    <div class="tab-head active" data-tab="desc">Description</div>
+    <div class="tab-head" data-tab="specs">Specifications</div>
+    <div class="tab-head" data-tab="reviews">Reviews (168)</div>
+  </div>
+
+  <div class="tab-panel" id="panel-desc">
+    <ul class="feat-list">
+      <li>Pre-plucked hairline for a seamless blend with your edges</li>
+      <li>4×4 lace closure, bleached knots</li>
+      <li>Adjustable elastic band fits most head sizes</li>
+      <li>Holds a wash-and-go curl pattern without daily styling</li>
+      <li>Can be dyed, bleached, and heat-styled like your own hair</li>
+      <li>Ships with a satin bag and wide-tooth comb</li>
+    </ul>
+    <p style="font-size:14px;line-height:1.7;color:#4a3941;">This kinky curly texture is our top pick for South African customers who want a wig that reads as natural hair rather than "wig hair." Every bundle comes from a single donor, so the curl pattern stays consistent from root to tip through repeated washing.</p>
+  </div>
+
+  <div class="tab-panel" id="panel-specs" style="display:none;">
+    <table class="spec-table">
+      <tr><td>Wig Style</td><td>4×4 Closure Wig</td></tr>
+      <tr><td>Hair Texture</td><td>Kinky Curly</td></tr>
+      <tr><td>Density</td><td>180%, 200%</td></tr>
+      <tr><td>Hair Color</td><td>Natural Black</td></tr>
+      <tr><td>Hair Grade</td><td>Virgin, Single Donor</td></tr>
+      <tr><td>Cap Size</td><td>22.5" average, adjustable</td></tr>
+      <tr><td>Expected Lifespan</td><td>12–18 months with proper care</td></tr>
+      <tr><td>Delivery to South Africa</td><td>5–8 business days</td></tr>
+      <tr><td>Return Policy</td><td>30 days, unworn hair, full refund</td></tr>
+    </table>
+  </div>
+
+  <div class="tab-panel" id="panel-reviews" style="display:none;">
+    <div class="review-summary">
+      <div class="review-score">
+        <div class="num">4.9</div>
+        <div class="stars">★★★★★</div>
+        <div style="font-size:12px;color:var(--muted);">168 reviews</div>
+      </div>
+      <div class="review-bars">
+        <div class="rbar">5★<div class="track"><div class="fill" style="width:88%;"></div></div>88%</div>
+        <div class="rbar">4★<div class="track"><div class="fill" style="width:9%;"></div></div>9%</div>
+        <div class="rbar">3★<div class="track"><div class="fill" style="width:2%;"></div></div>2%</div>
+        <div class="rbar">2★<div class="track"><div class="fill" style="width:1%;"></div></div>1%</div>
+        <div class="rbar">1★<div class="track"><div class="fill" style="width:0%;"></div></div>0%</div>
+      </div>
+    </div>
+    <div class="review">
+      <div class="review-top"><span class="review-name">Nomsa P.</span><span>Verified Buyer</span></div>
+      <span class="stars">★★★★★</span>
+      <p>Ordered a 18" for my sister's wedding. Held the curl through the whole reception, no frizz. Delivery to Joburg took 6 days.</p>
+    </div>
+    <div class="review">
+      <div class="review-top"><span class="review-name">Thandeka M.</span><span>Verified Buyer</span></div>
+      <span class="stars">★★★★★</span>
+      <p>My third wig from Sindiswa Shop and still the best texture match to my own hair I've found online.</p>
+    </div>
+    <div class="review">
+      <div class="review-top"><span class="review-name">Buhle K.</span><span>Verified Buyer</span></div>
+      <span class="stars">★★★★☆</span>
+      <p>Beautiful hair, runs slightly fuller than expected which I love, closure could be a touch more bleached for my skin tone.</p>
+    </div>
+  </div>
+</div>
+
+<div class="wrap related">
+  <h2>You May Also Like</h2>
+  <div class="grid" id="relatedGrid"></div>
+</div>
+
+<footer>
+  © 2026 Sindiswa Shop · Questions? <a href="sindiswa-shop.html#contact">Contact us</a>
+</footer>
+
+<script>
+// ---------- icon set (shared visual language with homepage) ----------
+function tSVG(kind, size=100){
+  const paths = {
+    coil:`<path d="M6 24c0-8 6-8 6 0s6 8 6 0 6-8 6 0 6 8 6 0 6-8 6 0"/><path d="M6 34c0-8 6-8 6 0s6 8 6 0 6-8 6 0 6 8 6 0 6-8 6 0" opacity="0.5"/>`,
+    spiral:`<path d="M24 6c9 0 14 5 14 12s-6 11-12 9-8-8-4-12 10-4 12 2-2 8-8 8"/>`,
+    wave:`<path d="M4 18c5-8 9-8 14 0s9 8 14 0 9-8 14 0"/><path d="M4 30c5-8 9-8 14 0s9 8 14 0 9-8 14 0" opacity="0.5"/>`,
+    zigzagTight:`<path d="M4 12 L10 24 L16 12 L22 24 L28 12 L34 24 L40 12 L44 24"/>`,
+  };
+  return `<svg width="${size}" height="${size}" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">${paths[kind]}</svg>`;
+}
+
+// gallery: 4 angles of the same texture (kinky curly)
+const angles = ['coil','spiral','coil','wave'];
+document.getElementById('galleryMain').innerHTML += tSVG('coil', 220);
+const thumbs = document.getElementById('galleryThumbs');
+thumbs.innerHTML = angles.map((k,i)=>`<div class="thumb${i===0?' active':''}" data-i="${i}">${tSVG(k,40)}</div>`).join('');
+thumbs.querySelectorAll('.thumb').forEach(t=>{
+  t.addEventListener('click',()=>{
+    thumbs.querySelectorAll('.thumb').forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');
+    document.getElementById('galleryMain').innerHTML = `<div class="gallery-badge">Best Seller</div>${tSVG(angles[t.dataset.i],220)}`;
+  });
+});
+
+// options
+const lengths = ['14"','16"','18"','20"','22"','24"'];
+const densities = ['150%','180%','200%'];
+let curLength = '18"', curDensity = '200%';
+
+function renderOpts(){
+  document.getElementById('lengthRow').innerHTML = lengths.map(l=>`<button class="opt-btn${l===curLength?' active':''}" data-l="${l}">${l}</button>`).join('');
+  document.getElementById('densityRow').innerHTML = densities.map(d=>`<button class="opt-btn${d===curDensity?' active':''}" data-d="${d}">${d}</button>`).join('');
+  document.getElementById('lengthSel').textContent = curLength;
+  document.getElementById('densitySel').textContent = curDensity;
+  document.querySelectorAll('#lengthRow .opt-btn').forEach(b=>b.onclick=()=>{curLength=b.dataset.l;renderOpts();});
+  document.querySelectorAll('#densityRow .opt-btn').forEach(b=>b.onclick=()=>{curDensity=b.dataset.d;renderOpts();});
+}
+renderOpts();
+
+// qty
+let qty=1;
+function changeQty(d){ qty=Math.max(1,qty+d); document.getElementById('qtyVal').textContent=qty; }
+
+// tabs
+document.querySelectorAll('.tab-head').forEach(h=>{
+  h.addEventListener('click',()=>{
+    document.querySelectorAll('.tab-head').forEach(x=>x.classList.remove('active'));
+    h.classList.add('active');
+    ['desc','specs','reviews'].forEach(name=>{
+      document.getElementById('panel-'+name).style.display = (name===h.dataset.tab)?'block':'none';
+    });
+  });
+});
+
+// related
+const related = [
+  {name:'Burmese Curly Half Wig', price:'R1 899', icon:'spiral'},
+  {name:'Kinky Straight Glueless Wig', price:'R2 199', icon:'zigzagTight'},
+  {name:'Body Wave 13×4 Lace Wig', price:'R2 899', icon:'wave'},
+  {name:'Kinky Curly Headband Wig', price:'R1 599', icon:'coil'},
+];
+document.getElementById('relatedGrid').innerHTML = related.map(p=>`
+  <div class="card">
+    <div class="card-swatch">${tSVG(p.icon,90)}</div>
+    <div class="card-body">
+      <h3>${p.name}</h3>
+      <div class="card-price">${p.price}</div>
+    </div>
+  </div>
+`).join('');
+</script>
+
+</body>
+</html>

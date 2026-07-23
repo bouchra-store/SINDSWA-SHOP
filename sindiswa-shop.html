@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sindiswa Shop — Human Hair Wigs, Made for South Africa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F6EFE2;
+    --cream-2:#EFE4CF;
+    --ink:#2B1A22;
+    --plum:#3F1533;
+    --plum-2:#5A1F44;
+    --gold:#C6941A;
+    --gold-2:#E3B23C;
+    --rose:#9C3A4A;
+    --line: rgba(43,26,34,0.14);
+    --radius: 2px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Manrope',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.display{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    margin:0;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+  @media (max-width:640px){.wrap{padding:0 18px;}}
+
+  /* ---------- Announcement bar ---------- */
+  .announce{
+    background:var(--plum);
+    color:var(--cream);
+    font-size:12.5px;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    text-align:center;
+    padding:9px 12px;
+    font-weight:600;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    background:var(--cream);
+    border-bottom:1px solid var(--line);
+    position:sticky; top:0; z-index:50;
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 0;
+  }
+  .logo{
+    font-family:'Fraunces',serif;
+    font-size:26px;
+    font-weight:700;
+    letter-spacing:-0.02em;
+  }
+  .logo em{font-style:italic; color:var(--rose); font-weight:500;}
+  .nav-links{
+    display:flex; gap:34px; font-size:14px; font-weight:600;
+    letter-spacing:0.02em;
+  }
+  .nav-links a{position:relative; padding:4px 0;}
+  .nav-links a::after{
+    content:""; position:absolute; left:0; bottom:0; height:2px; width:0;
+    background:var(--rose); transition:width .25s ease;
+  }
+  .nav-links a:hover::after{width:100%;}
+  .nav-right{display:flex; align-items:center; gap:18px; font-size:13px; font-weight:600;}
+  .pill-btn{
+    background:var(--plum); color:var(--cream); padding:10px 20px;
+    border-radius:999px; font-size:13px; font-weight:700; letter-spacing:0.02em;
+    border:1px solid var(--plum);
+  }
+  .icon-btn{width:20px;}
+  @media (max-width:860px){ .nav-links{display:none;} }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:
+      radial-gradient(circle at 85% 15%, rgba(230,178,60,0.25), transparent 45%),
+      linear-gradient(180deg, var(--plum) 0%, var(--plum-2) 100%);
+    color:var(--cream);
+    padding:88px 0 70px;
+    overflow:hidden;
+    position:relative;
+  }
+  .hero-grid{
+    display:grid; grid-template-columns:1.1fr 0.9fr; gap:50px; align-items:center;
+  }
+  @media (max-width:900px){ .hero-grid{grid-template-columns:1fr;} }
+  .eyebrow{
+    font-size:12.5px; letter-spacing:0.18em; text-transform:uppercase;
+    color:var(--gold-2); font-weight:700; margin-bottom:18px;
+  }
+  .hero h1{
+    font-size:clamp(38px,5.6vw,64px);
+    line-height:1.02;
+    color:var(--cream);
+  }
+  .hero h1 .accent{color:var(--gold-2); font-style:italic; font-weight:500;}
+  .hero p.lead{
+    font-size:17px; line-height:1.6; color:rgba(246,239,226,0.82);
+    max-width:440px; margin:22px 0 30px;
+  }
+  .hero-ctas{display:flex; gap:14px; flex-wrap:wrap;}
+  .btn-gold{
+    background:var(--gold); color:var(--ink); padding:15px 28px;
+    font-weight:800; font-size:14px; letter-spacing:0.02em; border-radius:2px;
+  }
+  .btn-ghost{
+    border:1px solid rgba(246,239,226,0.4); color:var(--cream);
+    padding:15px 28px; font-weight:700; font-size:14px; border-radius:2px;
+  }
+  .hero-note{
+    margin-top:34px; display:flex; gap:26px; flex-wrap:wrap;
+    font-size:12.5px; color:rgba(246,239,226,0.7); font-weight:600;
+  }
+  .hero-note span{display:flex; align-items:center; gap:7px;}
+  .dot{width:5px;height:5px;border-radius:50%;background:var(--gold-2);display:inline-block;}
+
+  /* hero art: curl-pattern rings, no stock photo needed */
+  .hero-art{position:relative; height:420px;}
+  .ring{
+    position:absolute; border-radius:50%;
+    border:1.5px solid rgba(227,178,60,0.35);
+  }
+  .curl-card{
+    position:absolute; background:var(--cream); border-radius:6px;
+    padding:18px 20px; width:210px; box-shadow:0 20px 45px rgba(0,0,0,0.28);
+    color:var(--ink);
+  }
+  .curl-card .tex-name{font-family:'Fraunces',serif; font-weight:600; font-size:15px;}
+  .curl-card .tex-sub{font-size:11.5px; color:#6b5a62; margin-top:2px;}
+
+  /* ---------- Section shared ---------- */
+  section{padding:86px 0;}
+  .section-head{
+    display:flex; justify-content:space-between; align-items:flex-end;
+    margin-bottom:44px; gap:20px; flex-wrap:wrap;
+  }
+  .section-head .eyebrow{color:var(--rose); margin-bottom:10px;}
+  .section-head h2{font-size:clamp(28px,3.4vw,40px);}
+  .section-head p{max-width:380px; font-size:14.5px; color:#6b5a62; line-height:1.6;}
+
+  /* ---------- Texture Match (signature element) ---------- */
+  .texture-band{background:var(--cream-2);}
+  .tex-selector{
+    display:grid; grid-template-columns:repeat(5,1fr); gap:14px;
+  }
+  @media (max-width:900px){ .tex-selector{grid-template-columns:repeat(2,1fr);} }
+  .tex-btn{
+    background:var(--cream); border:1px solid var(--line); border-radius:4px;
+    padding:22px 16px 18px; cursor:pointer; text-align:left;
+    transition:all .2s ease; font-family:inherit;
+  }
+  .tex-btn:hover{border-color:var(--rose); transform:translateY(-2px);}
+  .tex-btn.active{
+    background:var(--plum); border-color:var(--plum); color:var(--cream);
+  }
+  .tex-btn svg{width:38px; height:38px; margin-bottom:14px; display:block;}
+  .tex-btn .t-name{font-family:'Fraunces',serif; font-weight:600; font-size:15.5px;}
+  .tex-btn .t-desc{font-size:11.5px; color:#8a7680; margin-top:5px; line-height:1.4;}
+  .tex-btn.active .t-desc{color:rgba(246,239,226,0.75);}
+  .tex-hint{
+    margin-top:18px; font-size:13px; color:#8a7680; font-style:italic;
+  }
+
+  /* ---------- Product grid ---------- */
+  .grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:22px;
+  }
+  @media (max-width:980px){ .grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:560px){ .grid{grid-template-columns:1fr;} }
+  .card{
+    background:var(--cream); border:1px solid var(--line); border-radius:4px;
+    overflow:hidden; transition:box-shadow .2s ease, transform .2s ease;
+  }
+  .card:hover{box-shadow:0 18px 34px rgba(43,26,34,0.12); transform:translateY(-3px);}
+  .card-swatch{
+    height:190px; position:relative; display:flex; align-items:center; justify-content:center;
+  }
+  .card-swatch svg{width:70%; height:70%;}
+  .card-tag{
+    position:absolute; top:12px; left:12px; background:var(--ink); color:var(--cream);
+    font-size:10.5px; font-weight:700; letter-spacing:0.06em; text-transform:uppercase;
+    padding:5px 10px; border-radius:999px;
+  }
+  .card-body{padding:18px 18px 20px;}
+  .card-body h3{font-size:16px; font-weight:600; line-height:1.3;}
+  .card-meta{font-size:12px; color:#8a7680; margin-top:6px;}
+  .card-price{
+    display:flex; align-items:baseline; gap:8px; margin-top:12px;
+  }
+  .price-now{font-family:'Fraunces',serif; font-weight:700; font-size:19px;}
+  .price-was{font-size:13px; color:#a9989f; text-decoration:line-through;}
+  .card-cta{
+    margin-top:14px; width:100%; padding:11px; background:transparent;
+    border:1px solid var(--ink); font-weight:700; font-size:12.5px;
+    letter-spacing:0.03em; border-radius:2px; cursor:pointer;
+  }
+  .card-cta:hover{background:var(--ink); color:var(--cream);}
+
+  /* ---------- Trust strip ---------- */
+  .trust{
+    background:var(--plum); color:var(--cream);
+  }
+  .trust .wrap{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:24px; padding:44px 28px;
+  }
+  @media (max-width:800px){ .trust .wrap{grid-template-columns:repeat(2,1fr);} }
+  .trust-item{display:flex; gap:14px; align-items:flex-start;}
+  .trust-item svg{width:26px; flex-shrink:0; margin-top:2px; color:var(--gold-2);}
+  .trust-item h4{font-family:'Fraunces',serif; font-size:14.5px; font-weight:600; margin-bottom:4px;}
+  .trust-item p{font-size:12.5px; color:rgba(246,239,226,0.7); line-height:1.5; margin:0;}
+
+  /* ---------- Story ---------- */
+  .story{
+    display:grid; grid-template-columns:0.9fr 1.1fr; gap:60px; align-items:center;
+  }
+  @media (max-width:900px){ .story{grid-template-columns:1fr;} }
+  .story-visual{
+    background:var(--cream-2); border-radius:4px; padding:40px;
+    border:1px solid var(--line);
+  }
+  .route{display:flex; align-items:center; justify-content:space-between; margin-bottom:26px;}
+  .route-node{text-align:center; font-size:12px; font-weight:700;}
+  .route-node .dotc{
+    width:46px; height:46px; border-radius:50%; background:var(--plum); color:var(--cream);
+    display:flex; align-items:center; justify-content:center; margin:0 auto 8px;
+    font-family:'Fraunces',serif; font-size:15px;
+  }
+  .route-line{flex:1; height:1px; background:var(--line); margin:0 8px; position:relative; top:-18px;}
+  .story h2{font-size:clamp(26px,3vw,36px); margin-bottom:18px;}
+  .story p{font-size:15px; line-height:1.75; color:#4a3941; margin-bottom:14px;}
+
+  /* ---------- Newsletter / footer ---------- */
+  footer{background:var(--ink); color:var(--cream); padding-top:70px;}
+  .foot-cta{
+    text-align:center; padding-bottom:60px; border-bottom:1px solid rgba(246,239,226,0.12);
+  }
+  .foot-cta h2{color:var(--cream); font-size:clamp(26px,3.4vw,38px); margin-bottom:14px;}
+  .foot-cta p{color:rgba(246,239,226,0.65); font-size:14.5px; margin-bottom:26px;}
+  .foot-form{display:flex; max-width:420px; margin:0 auto; gap:0; border:1px solid rgba(246,239,226,0.3); border-radius:2px; overflow:hidden;}
+  .foot-form input{
+    flex:1; background:transparent; border:none; padding:14px 16px; color:var(--cream); font-size:14px; font-family:inherit;
+  }
+  .foot-form input::placeholder{color:rgba(246,239,226,0.45);}
+  .foot-form button{
+    background:var(--gold); border:none; padding:0 22px; font-weight:800; font-size:13px; cursor:pointer;
+  }
+  .foot-cols{
+    display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:30px; padding:56px 0 34px;
+  }
+  @media (max-width:800px){ .foot-cols{grid-template-columns:1fr 1fr; row-gap:36px;} }
+  .foot-cols h5{
+    font-size:12px; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold-2);
+    margin-bottom:16px; font-weight:700;
+  }
+  .foot-cols ul{list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px;}
+  .foot-cols a{font-size:13.5px; color:rgba(246,239,226,0.75);}
+  .foot-cols a:hover{color:var(--gold-2);}
+  .foot-bottom{
+    border-top:1px solid rgba(246,239,226,0.12); padding:22px 0 30px;
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+    font-size:12px; color:rgba(246,239,226,0.5);
+  }
+</style>
+</head>
+<body>
+
+<div class="announce">Free tracked shipping to South Africa on orders over R1 800 · Ships from our US warehouse</div>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">Sindiswa<em>Shop</em></div>
+    <nav class="nav-links">
+      <a href="#textures">Textures</a>
+      <a href="#bestsellers">Best Sellers</a>
+      <a href="#story">Our Story</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <span>🇿🇦 ZAR</span>
+      <a class="pill-btn" href="#bestsellers">Shop Wigs</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">100% Virgin &amp; Remy Human Hair</div>
+      <h1>Hair that holds<br><span class="accent">your</span> texture.</h1>
+      <p class="lead">Sindiswa Shop sources single-donor virgin and Remy hair and ships it straight to South Africa — built for kinky curls, Burmese waves and everything your natural hairline needs to blend into.</p>
+      <div class="hero-ctas">
+        <a class="btn-gold" href="#bestsellers">Shop Best Sellers</a>
+        <a class="btn-ghost" href="#textures">Find My Texture</a>
+      </div>
+      <div class="hero-note">
+        <span><i class="dot"></i>30-day return policy</span>
+        <span><i class="dot"></i>WhatsApp fitting support</span>
+        <span><i class="dot"></i>Durban &amp; Joburg drop-off points</span>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="ring" style="width:360px;height:360px; top:10px; right:20px;"></div>
+      <div class="ring" style="width:260px;height:260px; top:60px; right:70px; border-color:rgba(156,58,74,0.4);"></div>
+      <div class="curl-card" style="top:30px; left:0;">
+        <div class="tex-name">Kinky Curly</div>
+        <div class="tex-sub">Most-loved texture this season</div>
+      </div>
+      <div class="curl-card" style="bottom:40px; right:10px;">
+        <div class="tex-name">Burmese Curly</div>
+        <div class="tex-sub">Holds a wash-and-go for weeks</div>
+      </div>
+      <div class="curl-card" style="bottom:150px; left:40px; width:170px;">
+        <div class="tex-name">Kinky Straight</div>
+        <div class="tex-sub">Blends flush at the root</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="texture-band" id="textures">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Texture Match</div>
+        <h2>Pick your pattern, not our bestseller.</h2>
+      </div>
+      <p>Every head takes a different curl. Tap a pattern below and the shop filters to hair built to match it — no guessing from a product photo.</p>
+    </div>
+    <div class="tex-selector" id="texSelector">
+      <!-- filled by JS -->
+    </div>
+    <div class="tex-hint" id="texHint">Showing all textures — tap one above to narrow the shop.</div>
+  </div>
+</section>
+
+<section id="bestsellers">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Best Sellers</div>
+        <h2>What South Africa is wearing</h2>
+      </div>
+      <p>Chosen for durability first — these hold color, heat and repeat wear without shedding by month two.</p>
+    </div>
+    <div class="grid" id="productGrid"></div>
+  </div>
+</section>
+
+<section class="trust">
+  <div class="wrap">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/></svg>
+      <div><h4>Single-donor hair only</h4><p>No blended or floor-swept hair. Every bundle is traceable to one donor.</p></div>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg>
+      <div><h4>Sample-checked before shipping</h4><p>We test cuticle direction on every restock, not just the first batch.</p></div>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+      <div><h4>US-warehouse, SA-first</h4><p>Stocked in the US for reliability, priced and supported for the South African market.</p></div>
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 6L9 17l-5-5"/></svg>
+      <div><h4>30 days, no drama</h4><p>Unworn hair goes back for a full refund — no restocking fee.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="story">
+  <div class="wrap story">
+    <div class="story-visual">
+      <div class="route">
+        <div class="route-node"><div class="dotc">CN</div>Sourced</div>
+        <div class="route-line"></div>
+        <div class="route-node"><div class="dotc">US</div>Checked &amp; Stocked</div>
+        <div class="route-line"></div>
+        <div class="route-node"><div class="dotc">ZA</div>Delivered</div>
+      </div>
+      <p style="font-size:13px; color:#8a7680; line-height:1.6; margin:0;">Every order is quality-checked at our US warehouse before it ships on to Johannesburg, Durban, Cape Town and beyond — usually 5–8 days door to door.</p>
+    </div>
+    <div>
+      <div class="eyebrow" style="color:var(--rose); font-weight:700; font-size:12.5px; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:14px;">Why Sindiswa Shop exists</div>
+      <h2>Built by someone who was tired of ordering hair site-unseen.</h2>
+      <p>Sindiswa Shop started with one frustration: buying wigs online in South Africa either meant paying import prices for the same hair sold cheaper abroad, or trusting a local seller's word on "virgin" and "Remy" with no way to check.</p>
+      <p>We check the hair ourselves before it ever leaves our warehouse, we price for the South African market specifically, and we stock the textures our own customers actually wear — kinky curly, Burmese curly, kinky straight, body wave.</p>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap foot-cta">
+    <h2>Get first access to restocks</h2>
+    <p>New textures land in small batches. We'll message you before they sell out.</p>
+    <form class="foot-form" onsubmit="return false;">
+      <input type="email" placeholder="your@email.com" required>
+      <button type="submit">Notify Me</button>
+    </form>
+  </div>
+  <div class="wrap foot-cols">
+    <div>
+      <div class="logo" style="font-size:22px; margin-bottom:14px;">Sindiswa<em>Shop</em></div>
+      <p style="font-size:13px; color:rgba(246,239,226,0.6); line-height:1.6; max-width:260px;">Human hair wigs sourced, checked, and shipped for the South African market.</p>
+    </div>
+    <div>
+      <h5>Shop</h5>
+      <ul>
+        <li><a href="#bestsellers">Best Sellers</a></li>
+        <li><a href="#textures">Shop by Texture</a></li>
+        <li><a href="#">Kinky Straight</a></li>
+        <li><a href="#">Burmese Curly</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Support</h5>
+      <ul>
+        <li><a href="#">Track My Order</a></li>
+        <li><a href="#">Returns &amp; Refunds</a></li>
+        <li><a href="#">Fitting Guide</a></li>
+        <li><a href="#">WhatsApp Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Company</h5>
+      <ul>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#">Sourcing Standards</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    <span>© 2026 Sindiswa Shop. All rights reserved.</span>
+    <span>Prices shown in ZAR · Ships from the United States</span>
+  </div>
+</footer>
+
+<script>
+// ---------- Texture data (drives both selector + product grid) ----------
+const textures = [
+  { id:'kinky-straight', name:'Kinky Straight', desc:'Blends flush at natural roots', icon:'zigzagTight' },
+  { id:'kinky-curly', name:'Kinky Curly', desc:'Tight coil, big volume', icon:'coil' },
+  { id:'burmese-curly', name:'Burmese Curly', desc:'Bouncy, holds wash-and-go', icon:'spiral' },
+  { id:'body-wave', name:'Body Wave', desc:'Loose, everyday movement', icon:'wave' },
+  { id:'deep-wave', name:'Deep Wave', desc:'Defined S-pattern curl', icon:'deepwave' },
+];
+
+const products = [
+  { name:'Kinky Straight Glueless Wig', texture:'kinky-straight', grade:'Virgin · 180% Density', price:2199, was:2799, tag:'Best Seller' },
+  { name:'Kinky Curly 4x4 Closure Wig', texture:'kinky-curly', grade:'Virgin · 200% Density', price:2599, was:3199, tag:'Popular' },
+  { name:'Burmese Curly Half Wig', texture:'burmese-curly', grade:'Remy · 180% Density', price:1899, was:2399, tag:null },
+  { name:'Body Wave 13x4 Lace Wig', texture:'body-wave', grade:'Virgin · 150% Density', price:2899, was:3499, tag:null },
+  { name:'Deep Wave Bob Wig', texture:'deep-wave', grade:'Remy · 180% Density', price:1699, was:2099, tag:'New In'},
+  { name:'Kinky Straight 360 Wig', texture:'kinky-straight', grade:'Virgin · 200% Density', price:3099, was:3799, tag:null },
+  { name:'Kinky Curly Headband Wig', texture:'kinky-curly', grade:'Remy · 180% Density', price:1599, was:1999, tag:null },
+  { name:'Burmese Curly Full Lace Wig', texture:'burmese-curly', grade:'Virgin · 200% Density', price:3299, was:3999, tag:'Best Seller' },
+];
+
+// ---------- Icon paths (simple SVG line-art per texture, no stock photos) ----------
+function textureSVG(kind, size=38){
+  const s = size;
+  const common = `width="${s}" height="${s}" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"`;
+  const paths = {
+    zigzagTight: `<path d="M4 12 L10 24 L16 12 L22 24 L28 12 L34 24 L40 12 L44 24"/>`,
+    coil: `<path d="M6 24c0-8 6-8 6 0s6 8 6 0 6-8 6 0 6 8 6 0 6-8 6 0"/><path d="M6 34c0-8 6-8 6 0s6 8 6 0 6-8 6 0 6 8 6 0 6-8 6 0" opacity="0.5"/>`,
+    spiral: `<path d="M24 6c9 0 14 5 14 12s-6 11-12 9-8-8-4-12 10-4 12 2-2 8-8 8"/>`,
+    wave: `<path d="M4 18c5-8 9-8 14 0s9 8 14 0 9-8 14 0"/><path d="M4 30c5-8 9-8 14 0s9 8 14 0 9-8 14 0" opacity="0.5"/>`,
+    deepwave: `<path d="M4 14c6-10 10-10 16 0s10 10 16 0"/><path d="M4 26c6-10 10-10 16 0s10 10 16 0"/><path d="M4 38c6-10 10-10 16 0s10 10 16 0" opacity="0.4"/>`,
+  };
+  return `<svg ${common}>${paths[kind]}</svg>`;
+}
+
+// ---------- Render texture selector ----------
+const texSelector = document.getElementById('texSelector');
+let activeTexture = null;
+
+function renderSelector(){
+  texSelector.innerHTML = textures.map(t => `
+    <button class="tex-btn${activeTexture===t.id?' active':''}" data-tex="${t.id}">
+      ${textureSVG(t.icon)}
+      <div class="t-name">${t.name}</div>
+      <div class="t-desc">${t.desc}</div>
+    </button>
+  `).join('');
+  texSelector.querySelectorAll('.tex-btn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const id = btn.getAttribute('data-tex');
+      activeTexture = activeTexture === id ? null : id;
+      renderSelector();
+      renderProducts();
+    });
+  });
+}
+
+// ---------- Render product grid ----------
+const grid = document.getElementById('productGrid');
+const hint = document.getElementById('texHint');
+
+function renderProducts(){
+  const list = activeTexture ? products.filter(p=>p.texture===activeTexture) : products;
+  const texName = activeTexture ? textures.find(t=>t.id===activeTexture).name : null;
+  hint.textContent = texName
+    ? `Showing ${list.length} wig${list.length===1?'':'s'} in ${texName} — tap again to clear.`
+    : 'Showing all textures — tap one above to narrow the shop.';
+
+  grid.innerHTML = list.map(p=>{
+    const tex = textures.find(t=>t.id===p.texture);
+    return `
+    <a class="card" href="sindiswa-shop-product.html" style="display:block;cursor:pointer;">
+      <div class="card-swatch" style="background:${swatchBG(p.texture)}">
+        ${p.tag ? `<div class="card-tag">${p.tag}</div>` : ''}
+        <div style="color:var(--ink)">${textureSVG(tex.icon, 90)}</div>
+      </div>
+      <div class="card-body">
+        <h3>${p.name}</h3>
+        <div class="card-meta">${p.grade}</div>
+        <div class="card-price">
+          <span class="price-now">R${p.price.toLocaleString()}</span>
+          <span class="price-was">R${p.was.toLocaleString()}</span>
+        </div>
+        <button class="card-cta" onclick="event.preventDefault(); window.location.href='sindiswa-shop-product.html';">View Product</button>
+      </div>
+    </a>`;
+  }).join('');
+}
+
+function swatchBG(tex){
+  const map = {
+    'kinky-straight':'#EFE0D2',
+    'kinky-curly':'#E7D6C8',
+    'burmese-curly':'#F0E6D6',
+    'body-wave':'#E9DCC9',
+    'deep-wave':'#EAD9CE',
+  };
+  return map[tex] || '#EFE4CF';
+}
+
+renderSelector();
+renderProducts();
+</script>
+
+</body>
+</html>
